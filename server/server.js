@@ -4,7 +4,6 @@ var router = express.Router();
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 8080;
 
-
 app.use(express.static('./public'));
 
 app.use(express.urlencoded({ extended: false }))
@@ -21,7 +20,7 @@ app.listen(port, (err) => {
 });
 
 // JSON productos para agregar
-//{"title":"iPhone 11 64 GB (Product)Red","price":159000,"thumbnail":"a001.jpg"}
-//{"title":"iPhone 12 64 GB azul","price":200000,"thumbnail":"a002.jpg"}
-//{"title":"iPhone XR 64 GB negro","price":139000,"thumbnail":"a003.jpg"}
-//{"title":"iPhone XR 64 GB negro","price":139000,"thumbnail":"a003.jpg"}
+//{"title":"iPhone 11 64 GB Blanco","price":157999,"thumbnail":"https://raw.githubusercontent.com/rubeneggel72/Entrega09/main/img/img-001.jpg"}
+//{"title":"iPhone SE (2nd Generation) 64 GB negro","price":92700,"thumbnail":"https://raw.githubusercontent.com/rubeneggel72/Entrega09/main/img/img-002.jpg}
+//{"title":"iPhone 7 128 GB (product)red","price":80999,"thumbnail":"https://raw.githubusercontent.com/rubeneggel72/Entrega09/main/img/img-003.jpg"}
+//{"title":"iPhone 11 Pro Max 64 GB Gris espacial","price":249999,"thumbnail":"https://raw.githubusercontent.com/rubeneggel72/Entrega09/main/img/img-004.jpg"}
