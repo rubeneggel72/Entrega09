@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 let matrizProductos = []
 
-router.get('/', (req, res) => {
+router.get('/productos', (req, res) => {
     if (matrizProductos.length > 0) {
         res.send(matrizProductos);
     }
@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     }
 })
 
-router.get('/:id', (req, res) => {
+router.get('/productos/:id', (req, res) => {
     let producto = matrizProductos[parseInt(req.params.id) - 1]
     if (producto != undefined) {
         res.send(producto);
@@ -23,7 +23,7 @@ router.get('/:id', (req, res) => {
     res.send(JSON.stringify(producto));
 })
 
-router.post('/', (req, res) => {
+router.post('/productos', (req, res) => {
     let id = matrizProductos.length + 1
     req.body.id = id
     matrizProductos.push(req.body)

@@ -4,13 +4,14 @@ var router = express.Router();
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 8080;
 
+
 app.use(express.static('./public'));
 
 app.use(express.urlencoded({ extended: false }))
 
 app.use(bodyParser.json());
 
-app.use('/api/productos', require('../rutas/productos'))
+app.use('/api', require('../rutas/productos'))
 
 app.use('/', router)
 

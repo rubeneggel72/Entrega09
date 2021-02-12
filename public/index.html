@@ -5,11 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Server</title>
+    <link rel="stylesheet" href = "/css/bootstrap.min.css" />
+    <link( href='/css/styles.css')>
+    <title>Server</title>.
 </head>
 
 <body>
-    <h1>Server Corriendo en puerto:8080.</h1>
+    <h3>Ingrese Producto</h3>
+    <form class="form-horizontal" role="form" method="post">
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">Nombre</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre del Producto" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="precio" class="col-sm-2 control-label">Precio</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="price" name="price" placeholder="0" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Imagen URL</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-sm-10 col-sm-offset-2">
+                <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+            </div>
+        </div>
+
+    </form>
 
 </body>
 
