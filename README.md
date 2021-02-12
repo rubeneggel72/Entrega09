@@ -1,9 +1,6 @@
-# Notas:
+Este es un pequeño servidor de express 
 
-Este es un pequeño servidor de express listo para ejecutarse y servir la carpeta public en la web.
 
-Recuerden que deben de reconstruir los módulos de node con el comando
-
-```
-npm install
-```
+git remote add origin https://github.com/rubeneggel72/Entrega09.git
+git branch -M main
+git push -u origin main
