@@ -12,7 +12,9 @@ router.get('/productos', (req, res) => {
 })
 
 router.get('/productos/:id', (req, res) => {
-    let producto = matrizProductos[parseInt(req.params.id) - 1]
+    let id = parseInt(req.params.id)
+    let idx = getIndice(id)
+    let producto = matrizProductos[idx]
     if (producto != undefined) {
         res.send(producto);
         return
@@ -33,7 +35,7 @@ router.post('/productos', (req, res) => {
     res.send(req.body);
 })
 
-router.put('/productos/actualizar/:id', (req, res) => {
+router.put('/productos/:id', (req, res) => {
     let id = parseInt(req.params.id)
     let idx = getIndice(id)
     let producto = matrizProductos[idx]
@@ -47,12 +49,13 @@ router.put('/productos/actualizar/:id', (req, res) => {
     }
 })
 
-router.delete('/productos/delete/:id', (req, res) => {
+router.delete('/productos/:id', (req, res) => {
     let id = parseInt(req.params.id)
     let idx = getIndice(id)
     let producto = matrizProductos[idx]
-    matrizProductos.splice(getIndice(idx + 1), 1);
+    
     if (producto != undefined) {
+        matrizProductos.splice(getIndice(idx + 1), 1);
         res.send(producto);
         return
     }
@@ -62,13 +65,13 @@ router.delete('/productos/delete/:id', (req, res) => {
 })
 
 function getIndice(id) {
-    var Indice = -1;
+    var indice = -1;
     matrizProductos.filter(function (producto, i) {
         if (producto.id === id) {
-            Indice = i;
+            indice = i;
         }
     });
-    return Indice;
+    return indice;
 }
 
 module.exports = router
