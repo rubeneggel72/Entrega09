@@ -55,7 +55,7 @@ router.delete('/productos/:id', (req, res) => {
     let producto = matrizProductos[idx]
     
     if (producto != undefined) {
-        matrizProductos.splice(getIndice(idx + 1), 1);
+        matrizProductos.splice(idx, 1);
         res.send(producto);
         return
     }
